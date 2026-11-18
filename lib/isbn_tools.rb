@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
 require_relative "isbn_tools/version"
+require_relative "isbn_tools/isbn"
 
 module IsbnTools
   class Error < StandardError; end
-  # Your code goes here...
+
+  class ConversionError < Error; end
 end

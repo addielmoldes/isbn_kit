@@ -1,0 +1,57 @@
+module IsbnTools
+  class Isbn
+    type isbn10_parts = {
+        group: String,
+        registrant: String,
+        publication: String,
+        check_digit: String
+      }
+    type isbn13_parts = {
+        gs1: String,
+        group: String,
+        registrant: String,
+        publication: String,
+        check_digit: String
+      }
+
+    @isbn: String
+
+    def initialize: (String) -> void
+
+    def valid?: -> bool
+
+    def isbn10?: -> bool
+
+    def isbn13?: -> bool
+
+    def checksum: -> Integer
+
+    def parts: -> (isbn10_parts | isbn13_parts)
+
+    def to_isbn10: -> (Isbn | nil)
+
+    def to_isbn10!: -> Isbn
+
+    def to_isbn13: -> (Isbn | nil)
+
+    def to_isbn13!: -> Isbn
+
+    private
+
+    def normalize: (String) -> String
+
+    def valid_isbn10_checksum?: (?String) -> bool
+
+    def valid_isbn13_checksum?: (?String) -> bool
+
+    def calculate_isbn10_check_digit: (String) -> Integer
+
+    def calculate_isbn13_check_digit: (String) -> Integer
+
+    def digits: (String) -> Array[Integer]
+
+    def convert_to_isbn10: -> String
+
+    def convert_to_isbn13: -> String
+  end
+end
