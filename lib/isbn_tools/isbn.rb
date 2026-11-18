@@ -2,7 +2,7 @@
 
 # Provides an object-oriented interface for working with ISBNs.
 module IsbnTools
-  # Represents an ISBN and provides normalization, validation,
+  # Represents an ISBN and provides normalization, validation
   # and conversion between ISBN-10 and ISBN-13.
   class Isbn
     def initialize(isbn)
