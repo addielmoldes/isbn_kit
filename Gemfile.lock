@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    isbn_tools (0.1.0)
+    isbn_kit (0.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -86,7 +86,7 @@ PLATFORMS
 
 DEPENDENCIES
   irb
-  isbn_tools!
+  isbn_kit!
   minitest
   rake (~> 13.0)
   rubocop (~> 1.21)

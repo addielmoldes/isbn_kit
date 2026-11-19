@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in isbn_tools.gemspec
+# Specify your gem's dependencies in isbn_kit.gemspec
 gemspec
 
 group :test do

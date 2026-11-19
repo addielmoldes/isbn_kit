@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Provides an object-oriented interface for working with ISBNs.
-module IsbnTools
+module IsbnKit
   # Represents an ISBN and provides normalization, validation
   # and conversion between ISBN-10 and ISBN-13.
   class Isbn
@@ -29,25 +29,25 @@ module IsbnTools
     def to_isbn10
       return unless isbn13? && @isbn.start_with?("978")
 
-      IsbnTools::Isbn.new convert_to_isbn10
+      IsbnKit::Isbn.new convert_to_isbn10
     end
 
     def to_isbn10!
-      raise IsbnTools::ConversionError, "Cannot be converted to ISBN-10" unless isbn13? && @isbn.start_with?("978")
+      raise IsbnKit::ConversionError, "Cannot be converted to ISBN-10" unless isbn13? && @isbn.start_with?("978")
 
-      IsbnTools::Isbn.new convert_to_isbn10
+      IsbnKit::Isbn.new convert_to_isbn10
     end
 
     def to_isbn13
       return unless isbn10?
 
-      IsbnTools::Isbn.new convert_to_isbn13
+      IsbnKit::Isbn.new convert_to_isbn13
     end
 
     def to_isbn13!
-      raise IsbnTools::ConversionError, "Cannot be converted to ISBN-13" unless isbn10?
+      raise IsbnKit::ConversionError, "Cannot be converted to ISBN-13" unless isbn10?
 
-      IsbnTools::Isbn.new convert_to_isbn13
+      IsbnKit::Isbn.new convert_to_isbn13
     end
 
     def equivalent?(other_isbn)

@@ -1,4 +1,4 @@
-module IsbnTools
+module IsbnKit
   class Isbn
     type isbn10_parts = {
         group: String,

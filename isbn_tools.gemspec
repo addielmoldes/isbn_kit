@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
-require_relative "lib/isbn_tools/version"
+require_relative "lib/isbn_kit/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "isbn_tools"
-  spec.version = IsbnTools::VERSION
+  spec.name = "isbn_kit"
+  spec.version = IsbnKit::VERSION
   spec.authors = ["Addiel Moldes"]
   spec.email = ["addielpunk99@gmail.com"]
 
   spec.summary = "A Ruby toolkit for validating, normalizing, and converting ISBNs."
   spec.description = <<~DESC
-    isbn_tools is a Ruby library for working with International Standard Book
+    isbn_kit is a Ruby library for working with International Standard Book
     Numbers (ISBNs).
 
     It provides an Isbn class that handles ISBN sanitization and normalization,
@@ -18,13 +18,13 @@ Gem::Specification.new do |spec|
     extracts ISBN components such as GS1 prefix, registration group, registrant
     (publisher), publication element (title), and check digit.
   DESC
-  spec.homepage = "https://github.com/addielmoldes/isbn_tools"
+  spec.homepage = "https://github.com/addielmoldes/isbn_kit"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.1.0"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/addielmoldes/isbn_tools"
-  spec.metadata["changelog_uri"] = "https://github.com/addielmoldes/isbn_tools/blob/main/CHANGELOG.md"
+  spec.metadata["source_code_uri"] = "https://github.com/addielmoldes/isbn_kit"
+  spec.metadata["changelog_uri"] = "https://github.com/addielmoldes/isbn_kit/blob/main/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
