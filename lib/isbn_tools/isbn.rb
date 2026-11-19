@@ -19,7 +19,7 @@ module IsbnTools
     end
 
     def isbn13?
-      @isbn.match?(/\A\d{13}\z/) && valid_isbn13_checksum?
+      @isbn.match?(/\A(978|979)\d{10}\z/) && valid_isbn13_checksum?
     end
 
     def parts

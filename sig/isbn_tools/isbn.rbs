@@ -36,6 +36,8 @@ module IsbnTools
 
     def to_isbn13!: -> Isbn
 
+    def equivalent?: (String) -> bool
+
     private
 
     def normalize: (String) -> String
