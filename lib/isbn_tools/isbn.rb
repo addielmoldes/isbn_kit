@@ -50,8 +50,16 @@ module IsbnTools
       IsbnTools::Isbn.new convert_to_isbn13
     end
 
+    def equivalent?(other_isbn)
+      raise NotImplementedError
+    end
+
     def to_s
       normalize(@isbn)
+    end
+
+    def ==(other)
+      @isbn == other
     end
 
     private
