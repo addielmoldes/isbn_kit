@@ -12,3 +12,6 @@
 
 # IDE's
 .idea
+
+# gem
+*.gem
