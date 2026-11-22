@@ -67,11 +67,17 @@ GEM
     rubocop-ast (1.51.0)
       parser (>= 3.3.7.2)
       prism (>= 1.7)
+    ruby-lsp (0.11.2)
+      language_server-protocol (~> 3.17.0)
+      sorbet-runtime (>= 0.5.5685)
+      yarp (>= 0.12, < 0.13)
     ruby-progressbar (1.13.0)
+    sorbet-runtime (0.6.13715)
     tsort (0.2.0)
     unicode-display_width (3.3.0)
       unicode-emoji (~> 4.3)
     unicode-emoji (4.3.0)
+    yarp (0.12.0)
 
 PLATFORMS
   aarch64-linux-gnu
@@ -90,6 +96,7 @@ DEPENDENCIES
   minitest
   rake (~> 13.0)
   rubocop (~> 1.21)
+  ruby-lsp
 
 BUNDLED WITH
    2.6.9
