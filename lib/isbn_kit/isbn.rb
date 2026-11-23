@@ -55,7 +55,7 @@ module IsbnKit
     end
 
     def to_s
-      normalize(@isbn)
+      @isbn
     end
 
     def ==(other)
