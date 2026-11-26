@@ -16,15 +16,13 @@ module IsbnKit
 
     @isbn: String
 
-    def initialize: (String) -> void
+    def initialize: (String | Object) -> void
 
     def valid?: -> bool
 
     def isbn10?: -> bool
 
     def isbn13?: -> bool
-
-    def checksum: -> Integer
 
     def parts: -> (isbn10_parts | isbn13_parts)
 
@@ -40,7 +38,7 @@ module IsbnKit
 
     private
 
-    def normalize: (String) -> String
+    def normalize: (String | Object) -> String
 
     def valid_isbn10_checksum?: (?String) -> bool
 
